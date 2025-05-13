@@ -1,58 +1,100 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './App.css'
 import { NavLink } from 'react-router'
 import Card, { Credits } from './Card'
 import Navbar from './Navbar'
 
+
+
 function App() {
-  let cards = [
+  const [isLoading, setIsLoading] = useState(true);
+  
+  useEffect(() => {
+    // Simulate loading time
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1500);
+    
+    return () => clearTimeout(timer);
+  }, []);
+
+  const cards = [
     {
+      id: 1,
       tittle: "Hardware",
       text: "Problemas con componentes físicos, periféricos y conexiones.",
-      direction: "./hardware"
+      direction: "/hardware",
+      icon: "💻"
     },
     {
+      id: 2,
       tittle: "Software",
       text: "Problemas con programas, aplicaciones y sistemas operativos.",
-      direction: "./software"
+      direction: "/software",
+      icon: "🖥️"
     },
     {
+      id: 3,
       tittle: "Mantenimiento",
       text: "Guía para realizar mantenimiento preventivo a y mantener tu equipo en óptimas condiciones",
-      direction: "./mantenimiento"
+      direction: "/mantenimiento",
+      icon: "🔧"
     },
     {
+      id: 4,
       tittle: "Soluciones Rápidas",
       text: "Problemas comunes o frecuentes con soluciones rápidas sencillas",
-      direction: "./comunes"
+      direction: "/comunes",
+      icon: "⚡"
     }
   ]
 
+  if (isLoading) {
+    return (
+      <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-gray-900 to-black">
+        <div className="text-5xl text-blue-400 mb-6 animate-pulse">Tech Solve</div>
+        <div className="w-16 h-16 border-t-4 border-b-4 border-blue-500 rounded-full animate-spin"></div>
+      </div>
+    );
+  }
+
   return (
-    <>
-      <div className="w-full p-5 gap-4 bg-black flex flex-row items-left mb-10 mt-3">
-      <div className='flex'><Navbar /></div>
-      <div className='w-full flex flex-col items-left'>
-        <span className='text-5xl text-neutral-50'>Tech Solve</span>
-        <span className='text-2xl text-gray-600'>Soluciones a problemas comunes en hardware y software</span>
-      </div>
-      </div>
+    <div className="flex flex-col min-h-screen bg-gradient-to-br from-gray-900 to-black">
+      <header className="w-full p-5 gap-4 bg-black bg-opacity-60 backdrop-blur-md border-b border-gray-800 flex flex-row items-center mb-10 sticky top-0 z-10">
+        <Navbar />
+        <div className='flex flex-col'>
+          <span className='text-5xl text-blue-400 font-bold tracking-wider'>Tech Solve</span>
+          <span className='text-2xl text-gray-400'>Soluciones a problemas comunes en hardware y software</span>
+        </div>
+      </header>
       
-      <div className='w-full flex flex-row justify-between ml-3 mr-3 p-4 '>
-        <section className='flex text-4xl'>Categorías</section>
-        <section className='bg-gray-500 mr-15 w-260 h-12' />
-      </div>
-      <section className='grid md:grid-cols-2 w-325 gap-5 ml-3'>
-      {cards.map(function(card){
-          return(
-            <Card key={card.id} direction={card.direction} tittle={card.tittle} text={card.text} />
-          )
-        })}
-      </section>
+      <main className="flex-grow px-6 max-w-7xl mx-auto w-full">
+        <div className='w-full flex flex-row justify-between mb-10 items-center'>
+          <div className="relative">
+            <h2 className='text-4xl text-white font-bold'>Categorías</h2>
+            <div className="absolute -bottom-2 left-0 w-45 h-1 bg-blue-500 rounded-full"></div>
+          </div>
+          <div className='bg-blue-500 bg-opacity-20 w-64 h-12 rounded-lg border border-blue-500 border-opacity-30 flex items-center justify-center'>
+            <span className="text-blue-400">Encuentra soluciones rápidas</span>
+          </div>
+        </div>
+        
+        <section className='grid md:grid-cols-2 lg:grid-cols-2 gap-6 mb-24'>
+          {cards.map(card => (
+            <Card 
+              key={card.id} 
+              direction={card.direction} 
+              tittle={card.tittle} 
+              text={card.text}
+              icon={card.icon} 
+            />
+          ))}
+        </section>
+      </main>
 
-     <Credits />
-
-    </>
+      <Credits />
+    </div>
   )
 }
-export default App
+
+export default App;

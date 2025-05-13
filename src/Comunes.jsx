@@ -17,38 +17,38 @@ export default function Comunes(){
             rounded-2xl flex justify-center item-center p-4 flex-col'>
                 <h1 className="text-neutral-900 text-3xl">Reinicio del Sistema</h1>
                 <ul className="text-neutral-700 text-lg">
-                    <p>1. Guarda todos tus documentos abiertos</p>
-                    <p>2. Cierra todas las aplicaciones</p>
-                    <p>3. Reinicia tu computadora desde el menú de inicio</p>
-                    <p>4. Espera a que el sistema se reinicie completamente</p>
+                    <li>1. Guarda todos tus documentos abiertos</li>
+                    <li>2. Cierra todas las aplicaciones</li>
+                    <li>3. Reinicia tu computadora desde el menú de inicio</li>
+                    <li>4. Espera a que el sistema se reinicie completamente</li>
                 </ul>
            </div>
            <div className='w-150 bg-neutral-200 shadow-gray-400 shadow-lg
             rounded-2xl flex justify-center item-center p-4 flex-col'>
                 <h1 className="text-neutral-900 text-3xl">Actualizar Controladores</h1>
                 <ul className="text-neutral-700 text-lg">
-                    <p>1. Abre el Administrador de dispositivos</p>
-                    <p>2. Localiza el dispositivo que necesita actualización</p>
-                    <p>3. Haz click derecho y selecciona "Actualizar controlador"</p>
-                    <p>4. Sigue las instrucciones en pantalla</p>
+                    <li>1. Abre el Administrador de dispositivos</li>
+                    <li>2. Localiza el dispositivo que necesita actualización</li>
+                    <li>3. Haz click derecho y selecciona "Actualizar controlador"</li>
+                    <li>4. Sigue las instrucciones en pantalla</li>
                 </ul>
            </div>
            <div className='w-150 bg-neutral-200 shadow-gray-400 shadow-lg
             rounded-2xl flex justify-center item-center p-4 flex-col'>
                 <h1 className="text-neutral-900 text-3xl">PC Lenta</h1>
                 <ul className="text-neutral-700 text-lg">
-                    <p>1. Cierra programas innecesarios (Ctrl + Shift + Esc → Finalizar Tareas).</p>
-                    <p>2. Borra archivos temporales (Win + R → escribe %temp% → Eliminar todo).</p>
-                    <p>3. Desactiva programas al inicio (Ctrl + Shift + Esc → Inicio → Deshabilitar).</p>
+                    <li>1. Cierra programas innecesarios (Ctrl + Shift + Esc → Finalizar Tareas).</li>
+                    <li>2. Borra archivos temporales (Win + R → escribe %temp% → Eliminar todo).</li>
+                    <li>3. Desactiva programas al inicio (Ctrl + Shift + Esc → Inicio → Deshabilitar).</li>
                 </ul>
            </div>
            <div className='w-150 bg-neutral-200 shadow-gray-400 shadow-lg
             rounded-2xl flex justify-center item-center p-4 flex-col'>
                 <h1 className="text-neutral-900 text-3xl">Pantalla Azul</h1>
                 <ul className="text-neutral-700 text-lg">
-                    <p>1. Reinicia en modo seguro (F8 o Shift + Reiniciar).</p>
-                    <p>2. Actualiza los drivers (Desde el administrador de dispositivos).</p>
-                    <p>3. Escanea errores del disco (ejecuta CMD como administrador → chkdsk /f /r + enter).</p>
+                    <li>1. Reinicia en modo seguro (F8 o Shift + Reiniciar).</li>
+                    <li>2. Actualiza los drivers (Desde el administrador de dispositivos).</li>
+                    <li>3. Escanea errores del disco (ejecuta CMD como administrador → chkdsk /f /r + enter).</li>
                 </ul>
            </div>
           </section>
