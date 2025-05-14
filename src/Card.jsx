@@ -70,13 +70,14 @@ export function Credits(){
           </div>
           
           <div className="flex gap-4">
-            <a href="#" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-600 transition-colors">
+            <a href="https://x.com/Rubn46214306" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-600 transition-colors">
               <span className="text-white">X</span>
             </a>
-            <a href="#" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-600 transition-colors">
+            <a href="https://www.facebook.com/share/16m6vKqGqw/" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-600 transition-colors">
               <span className="text-white">f</span>
             </a>
-            <a href="#" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-600 transition-colors">
+            <a href="https://www.linkedin.com/uas/login?session_redirect=https%3A%2F%2Fwww.linkedin.com%2Fmynetwork%2Fdiscovery-see-all%3Fusecase%3DPEOPLE_FOLLOWS%26followMember%3Druben-angel-alfonso-49447b350" 
+            className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-600 transition-colors">
               <span className="text-white">in</span>
             </a>
           </div>

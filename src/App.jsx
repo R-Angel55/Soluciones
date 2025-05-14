@@ -36,14 +36,14 @@ function App() {
     {
       id: 3,
       tittle: "Mantenimiento",
-      text: "Guía para realizar mantenimiento preventivo a y mantener tu equipo en óptimas condiciones",
+      text: "Guía para realizar mantenimiento preventivo y para mantener tu equipo en óptimas condiciones",
       direction: "/mantenimiento",
       icon: "🔧"
     },
     {
       id: 4,
       tittle: "Soluciones Rápidas",
-      text: "Problemas comunes o frecuentes con soluciones rápidas sencillas",
+      text: "Problemas comunes o frecuentes con soluciones rápidas y sencillas",
       direction: "/comunes",
       icon: "⚡"
     }
