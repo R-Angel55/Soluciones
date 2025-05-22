@@ -36,7 +36,7 @@ function App() {
     {
       id: 3,
       tittle: "Mantenimiento",
-      text: "Guía para realizar mantenimiento preventivo y para mantener tu equipo en óptimas condiciones",
+      text: "Consejos para realizar mantenimiento preventivo y para mantener tu equipo en óptimas condiciones",
       direction: "/mantenimiento",
       icon: "🔧"
     },
